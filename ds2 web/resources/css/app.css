@@ -1,0 +1,177 @@
+/* Variables */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #3b82f6;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+}
+
+/* Cards */
+.card {
+    border: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    transition: width 0.6s ease;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Forms */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Navigation */
+.navbar-dark.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Map Styles */
+.leaflet-container {
+    font-family: 'Inter', sans-serif;
+}
+
+.leaflet-popup-content {
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-item {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom Scrollbar */
+.step-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.step-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.step-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.step-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .step-list {
+        max-height: none;
+    }
+    
+    #map, #goalMap {
+        height: 250px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e5e7eb;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+    }
+    
+    .text-muted {
+        color: #9ca3af !important;
+    }
+    
+    .form-control,
+    .form-select {
+        background-color: #1a1a1a;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #1a1a1a;
+        color: #e5e7eb;
+    }
+    
+    .modal-content {
+        background-color: #2d2d2d;
+    }
+    
+    .modal-header {
+        border-bottom-color: #4b5563;
+    }
+    
+    .modal-footer {
+        border-top-color: #4b5563;
+    }
+} 
